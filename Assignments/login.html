@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Validation</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 250px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login Form</h2>
+    <form id="loginForm">
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="Enter email">
+        <span id="emailError" class="error"></span>
+
+        <label>Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <span id="passwordError" class="error"></span>
+
+        <button type="submit">Login</button>
+    </form>
+    <p id="successMsg" style="color: green;"></p>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let emailError = document.getElementById('emailError');
+            let passwordError = document.getElementById('passwordError');
+            let successMsg = document.getElementById('successMsg');
+            
+            emailError.textContent = '';
+            passwordError.textContent = '';
+            successMsg.textContent = '';
+            
+            let isValid = true;
+            
+            // Email validation
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(!email) {
+                emailError.textContent = 'Email is required';
+                isValid = false;
+            } else if(!emailPattern.test(email)) {
+                emailError.textContent = 'Invalid email format';
+                isValid = false;
+            }
+            
+            // Password validation
+            if(!password) {
+                passwordError.textContent = 'Password is required';
+                isValid = false;
+            } else if(password.length < 6) {
+                passwordError.textContent = 'Password must be at least 6 characters';
+                isValid = false;
+            }
+            
+            if(isValid) {
+                successMsg.textContent = 'Login successful!';
+                document.getElementById('loginForm').reset();
+            }
+        });
+    </script>
+</body>
+</html>

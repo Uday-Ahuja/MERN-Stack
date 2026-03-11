@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Division</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+        .controls {
+            margin-bottom: 150px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Move Division Animation</h2>
+    <div class="controls">
+        <button onclick="moveUp()">Up</button><br>
+        <button onclick="moveLeft()">Left</button>
+        <button onclick="moveRight()">Right</button><br>
+        <button onclick="moveDown()">Down</button>
+    </div>
+
+    <div id="box"></div>
+
+    <script>
+        let box = document.getElementById('box');
+        let posX = 200;
+        let posY = 200;
+
+        function moveUp() {
+            posY -= 20;
+            box.style.top = posY + 'px';
+        }
+
+        function moveDown() {
+            posY += 20;
+            box.style.top = posY + 'px';
+        }
+
+        function moveLeft() {
+            posX -= 20;
+            box.style.left = posX + 'px';
+        }
+
+        function moveRight() {
+            posX += 20;
+            box.style.left = posX + 'px';
+        }
+    </script>
+</body>
+</html>
