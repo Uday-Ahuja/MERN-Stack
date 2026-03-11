@@ -29,6 +29,3 @@ To build full-stack development skills by focusing on:
 ## Progress
 
 This repository is updated regularly as I progress through concepts, assignments, and projects.
-```
-
----
