@@ -114,7 +114,23 @@ Key points:
 - Auto-invoked — `()` at the end is what triggers it, argument goes inside that.
 - **Cannot return a value** to outside (nothing to receive it).
 - Used to pass functions as arguments (callbacks).
+## Fat Arrow / Lambda — Additional Examples
 
+No-arg version — simplest IIFE:
+```js
+(() => {
+    document.write("Fat arrow executed");
+})();
+```
+
+With args — values passed in the trailing `()`:
+```js
+((a, b) => {
+    document.write("Sum = " + (a + b));
+})(10, 20);
+```
+
+> The trailing `(10, 20)` is the call. Everything before it is the function definition. Think of it as defining and calling in one line.
 ---
 
 ## 5. Callback Function
