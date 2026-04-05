@@ -1,0 +1,15 @@
+<script>
+    var arr = [12, 32, 13, 75, 24, 75];
+    var largest = arr[0], second = arr[0];
+
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            second = largest;
+            largest = arr[i];
+        } else if (arr[i] > second && arr[i] != largest) {
+            second = arr[i];
+        }
+    }
+
+    document.write("2nd Largest: " + second);
+</script>
