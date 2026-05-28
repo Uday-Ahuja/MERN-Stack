@@ -1,4 +1,4 @@
-import User from '../model/user.js';
+import User from '../models/user.js';
 export async function handleGetAllUsers(req,res){
     const allUsers = await User.find({});
     return res.status(200).json(allUsers);

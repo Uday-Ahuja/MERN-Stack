@@ -11,7 +11,7 @@ connectMongoDB('mongodb://127.0.0.1:27017/first-app-1').then(console.log("MongoD
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-import logReqRes from './middlewares/index.js';
+import logReqRes from './middleware/index.js';
 app.use(logReqRes('log.txt'));
 //Routes
 app.use("/users",userRouter);
