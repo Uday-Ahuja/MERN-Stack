@@ -1,31 +1,19 @@
-# MERN Stack Learning
+# MERN Stack — Learning & Projects
 
-A structured repository documenting my web development journey with the MERN stack (MongoDB, Express.js, React.js, Node.js).
+Documenting my web development journey through the full MERN stack.
+Built concept by concept, not tutorial to tutorial.
 
-## Learning Path
+## What's in here
 
-* HTML & CSS Fundamentals
-* JavaScript & ES6
-* jQuery & Bootstrap
-* Node.js & Express.js
-* React.js
-* MongoDB
-* Full-Stack Project Development
+- **Assignments/** — Practice exercises per topic
+- **Projects/** — Mini-projects and applications built during the course
+  - `rest/` — REST API with Node.js, Express.js, MongoDB (MVC architecture, 
+     full CRUD, custom middleware)
+  - `PageTurner/` — Static book review site (HTML/CSS)
+- **Notes/** — Concept documentation as I learn each technology
 
-## Repository Structure
+## Stack covered so far
+HTML · CSS · JavaScript (ES6) · jQuery · Bootstrap · Node.js · Express.js · MongoDB
 
-* **Assignments/** - Practice exercises and homework
-* **Projects/** - Complete web applications and mini-projects
-* **Notes/** - Study notes and concept documentation
-
-## Objective
-
-To build full-stack development skills by focusing on:
-* Strong fundamentals in each technology
-* Clean, maintainable code
-* Hands-on project implementation
-* Problem-solving approach
-
-## Progress
-
-This repository is updated regularly as I progress through concepts, assignments, and projects.
+## In progress
+React.js → then full-stack project (Confero — academic resource sharing platform)
