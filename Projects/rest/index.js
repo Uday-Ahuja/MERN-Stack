@@ -5,7 +5,7 @@ const app = express();
 const port = 8080;
 //connection
 import connectMongoDB from './connection.js';
-connectMongoDB('mongodb://127.0.0.1:27017/first-app-1').then(console.log("MongoDb Connected"));
+connectMongoDB('...').then(() => console.log("MongoDb Connected"));
 
 
 // Middleware
